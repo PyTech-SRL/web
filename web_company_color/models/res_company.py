@@ -217,24 +217,21 @@ class ResCompany(models.Model):
     def scss_create_or_update_attachment(self, uninstall=False):
         IrAttachmentObj = self.env["ir.attachment"]
         for record in self:
-            if not uninstall:
-              datas = base64.b64encode(record._scss_generate_content().encode("utf-8"))
-            else:
-              datas = base64.b64encode(record._scss_generate_content(uninstall).encode("utf-8"))
-            custom_url = record.scss_get_url()
-            custom_attachment = IrAttachmentObj.sudo().search(
+          datas = base64.b64encode(record._scss_generate_content(uninstall).encode("utf-8"))
+          custom_url = record.scss_get_url()
+          custom_attachment = IrAttachmentObj.sudo().search(
                 [("url", "=", custom_url), ("company_id", "=", record.id)]
             )
-            values = {
+          values = {
                 "datas": datas,
                 "db_datas": datas,
                 "url": custom_url,
                 "name": custom_url,
                 "company_id": record.id,
             }
-            if custom_attachment:
-                custom_attachment.sudo().write(values)
-            else:
-                values.update({"type": "binary", "mimetype": "text/scss"})
-                IrAttachmentObj.sudo().create(values)
+          if custom_attachment:
+              custom_attachment.sudo().write(values)
+          else:
+              values.update({"type": "binary", "mimetype": "text/scss"})
+              IrAttachmentObj.sudo().create(values)
         self.env["ir.qweb"].sudo().clear_caches()
