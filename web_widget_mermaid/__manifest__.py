@@ -5,7 +5,7 @@
     "name": "Mermaid flowchart widget",
     "category": "Web",
     "author": "Therp BV,Odoo Community Association (OCA)",
-    "version": "14.0.1.0.0",
+    "version": "16.0.1.0.0",
     "license": "AGPL-3",
     "summary": "Render mermaid markdown flowcharts",
     "website": "https://github.com/OCA/web",
