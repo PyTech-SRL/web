@@ -10,9 +10,15 @@
     "summary": "Render mermaid markdown flowcharts",
     "website": "https://github.com/OCA/web",
     "depends": ["web"],
-    "data": [
-        "view/web_widget_mermaid_view.xml",
-    ],
+    "assets": {
+        "web.assets_backend": [
+            "web_widget_mermaid/static/src/js/mermaid.js",
+            "web_widget_mermaid/static/src/js/web_widget_mermaid.js",
+        ],
+        "web.assets_frontend": [
+            "web_widget_mermaid/static/src/scss/web_widget_mermaid_default_theme.scss",
+        ],
+    },
     "demo": [
         "demo/res_users_flowchart.xml",
     ],

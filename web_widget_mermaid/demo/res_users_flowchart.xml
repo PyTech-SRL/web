@@ -4,7 +4,7 @@
         <field name="name">x_flowchart</field>
         <field name="model_id" ref="base.model_res_users" />
         <field name="field_description">Demo mermaid flowchart</field>
-        <field name="ttype">char</field>
+        <field name="ttype">text</field>
     </record>
     <record id="view_users_form_flowchart" model="ir.ui.view">
         <field name="inherit_id" ref="base.view_users_form" />
