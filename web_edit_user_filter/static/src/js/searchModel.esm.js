@@ -3,7 +3,7 @@
 import {SearchModel} from "@web/search/search_model";
 import {patch} from "@web/core/utils/patch";
 
-patch(SearchModel.prototype, "web_edit_user_filter.SearchModel", {
+patch(SearchModel.prototype, {
     _getIrFilterDescription(params) {
         var {preFavorite, irFilter} = this._super(...arguments);
         if (params !== undefined && "facet" in params) {

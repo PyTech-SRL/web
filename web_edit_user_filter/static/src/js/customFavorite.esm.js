@@ -3,7 +3,7 @@
 import {CustomFavoriteItem} from "@web/search/favorite_menu/custom_favorite_item";
 import {patch} from "@web/core/utils/patch";
 
-patch(CustomFavoriteItem.prototype, "web_edit_user_filter.CustomFavoriteItem", {
+patch(CustomFavoriteItem.prototype, {
     /**
      * @param {Event} ev
      */

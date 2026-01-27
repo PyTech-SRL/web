@@ -6,7 +6,7 @@ import {qweb} from "web.core";
 import {_t} from "@web/core/l10n/translation";
 import {useService} from "@web/core/utils/hooks";
 
-patch(SearchBar.prototype, "web_edit_user_filter.SearchBar", {
+patch(SearchBar.prototype, {
     setup() {
         this.notificationService = useService("notification");
         var self = this;
