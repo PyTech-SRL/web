@@ -7,8 +7,8 @@
         owl="1"
     >
         <xpath expr="//div[@class='o_searchview_facet']" position="attributes">
-           <attribute name="t-att-data-type">facet.type</attribute>
-           <attribute name="t-att-data-gp">facet.groupId</attribute>
+            <attribute name="t-att-data-type">facet.type</attribute>
+            <attribute name="t-att-data-gp">facet.groupId</attribute>
         </xpath>
     </t>
 </templates>
